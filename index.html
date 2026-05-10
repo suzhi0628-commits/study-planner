@@ -1,133 +1,61 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StudyPlanner</title>
-
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyPlanner App</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="app">
+<div class="app">
 
-    <!-- Header -->
-    <div class="header">
-      <div>
-        <p class="logo-text">StudyPlanner</p>
-        <h1>今天继续靠近 IELTS 7.5</h1>
-      </div>
+  <!-- Header + 登录注册 -->
+  <div class="header">
+    <p class="logo-text">StudyPlanner</p>
+    <div class="auth-buttons">
+      <button id="login-btn">登录</button>
+      <button id="register-btn">注册</button>
+    </div>
+  </div>
 
-      <div class="plant">
-        🌱
+  <!-- Tab Pages -->
+  <div class="tab-container">
+
+    <div class="tab-page" id="tab-today">
+      <h2>今日计划</h2>
+      <div id="task-list"></div>
+    </div>
+
+    <div class="tab-page hidden" id="tab-growth">
+      <h2>成长中心</h2>
+      <div id="growth-container">
+        <p>你今天完成了 0 个任务</p>
       </div>
     </div>
 
-    <!-- Progress Card -->
-    <div class="progress-card">
-      <div class="progress-top">
-        <div>
-          <p class="small-text">当前阶段</p>
-          <h2>Listening Foundation</h2>
-        </div>
-
-        <div class="right">
-          <p class="small-text">目标</p>
-          <h3>IELTS 7.5</h3>
-        </div>
-      </div>
-
-      <div class="progress-bar">
-        <div class="progress-fill"></div>
-      </div>
-
-      <div class="progress-bottom">
-        <span>当前能力 5.0</span>
-        <span>成长中</span>
-      </div>
+    <div class="tab-page hidden" id="tab-schedule">
+      <h2>计划调度</h2>
+      <p>每日任务拆解、阶段计划将在这里显示</p>
     </div>
 
-    <!-- Tasks -->
-    <div class="section-title">
-      <h2>今日任务</h2>
-      <span>45 min</span>
-    </div>
-
-    <div class="task-list">
-
-      <div class="task-card">
-        <div class="task-top">
-          <div>
-            <h3>听力：数字与日期识别训练</h3>
-            <p>15 min</p>
-          </div>
-
-          <button class="task-btn">
-            开始
-          </button>
-        </div>
-
-        <div class="growth-box">
-          <strong>能力成长：</strong>
-          提升 Part1 基础信息捕捉能力
-        </div>
-      </div>
-
-      <div class="task-card">
-        <div class="task-top">
-          <div>
-            <h3>阅读：关键词定位练习</h3>
-            <p>20 min</p>
-          </div>
-
-          <button class="task-btn">
-            开始
-          </button>
-        </div>
-
-        <div class="growth-box">
-          <strong>能力成长：</strong>
-          提升快速定位能力
-        </div>
-      </div>
-
-      <div class="task-card completed">
-        <div class="task-top">
-          <div>
-            <h3>词汇：高频词 10 个</h3>
-            <p>10 min</p>
-          </div>
-
-          <button class="task-btn done">
-            已完成
-          </button>
-        </div>
-
-        <div class="growth-box">
-          <strong>能力成长：</strong>
-          强化阅读识别率
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Weekly Growth -->
-    <div class="growth-card">
-      <p class="week-text">本周成长</p>
-
-      <h2>
-        你的阅读定位速度提升了 18%
-      </h2>
-
-      <div class="growth-detail">
-        上周你平均需要 6 分钟完成定位练习，
-        现在已经缩短到 4 分 55 秒。
-      </div>
+    <div class="tab-page hidden" id="tab-profile">
+      <h2>我的</h2>
+      <p>用户名: <span id="user-name">未登录</span></p>
     </div>
 
   </div>
 
-  <script src="script.js"></script>
+  <!-- 底部 Tab -->
+  <div class="tab-bar">
+    <button data-tab="tab-today">今日计划</button>
+    <button data-tab="tab-growth">成长中心</button>
+    <button data-tab="tab-schedule">计划调度</button>
+    <button data-tab="tab-profile">我的</button>
+  </div>
 
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

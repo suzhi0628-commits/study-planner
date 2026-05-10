@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "type": "vocab",
+    "question": "abandon",
+    "answer": "v. 放弃",
+    "growth": "记住高频词汇，提升词汇量",
+    "duration": 5
+  },
+  {
+    "id": 2,
+    "type": "vocab",
+    "question": "abstract",
+    "answer": "adj. 抽象的",
+    "growth": "理解抽象词用法",
+    "duration": 5
+  },
+  {
+    "id": 3,
+    "type": "vocab",
+    "question": "accurate",
+    "answer": "adj. 准确的",
+    "growth": "掌握常用雅思词汇",
+    "duration": 5
+  },
+  {
+    "id": 10,
+    "type": "reading",
+    "passage": "Some people think that traveling overseas helps in personal development. Others disagree.",
+    "questions": [
+      {
+        "question": "What are the contrasting opinions about overseas travel?",
+        "answer": "Some think it helps development; others disagree."
+      }
+    ],
+    "growth": "提升阅读理解与观点对比能力",
+    "duration": 15
+  },
+  {
+    "id": 11,
+    "type": "reading",
+    "passage": "In recent years, many cities have banned cars from their downtown areas to reduce pollution.",
+    "questions": [
+      {
+        "question": "Why have some cities banned cars from downtown?",
+        "answer": "To reduce pollution."
+      }
+    ],
+    "growth": "练习阅读细节抓取",
+    "duration": 15
+  },
+  {
+    "id": 20,
+    "type": "listening",
+    "audio": "",
+    "question": "Listen: The speaker discusses environmental issues. What is the main focus?",
+    "answer": "Environmental conservation.",
+    "growth": "提高听力主旨捕捉能力",
+    "duration": 10
+  },
+  {
+    "id": 21,
+    "type": "listening",
+    "audio": "",
+    "question": "Listening Extra: The lecturer mentions 4 causes of climate change. How many are discussed?",
+    "answer": "4",
+    "growth": "练习数字与细节",
+    "duration": 10
+  },
+  {
+    "id": 30,
+    "type": "writing",
+    "prompt": "Some people prefer to study alone, while others prefer to study in groups. Discuss both and give your opinion.",
+    "answer": "范文示例： ...",
+    "growth": "练习写作结构与观点表达",
+    "duration": 25
+  },
+  {
+    "id": 31,
+    "type": "writing",
+    "prompt": "Some people believe that modern technology reduces human interaction. Discuss both sides.",
+    "answer": "范文示例： ...",
+    "growth": "练习论证与句式结构",
+    "duration": 25
+  }
+]
