@@ -10,7 +10,7 @@
 
 <div class="app">
 
-  <!-- Header + 登录注册 -->
+  <!-- Header -->
   <div class="header">
     <p class="logo-text">StudyPlanner</p>
     <div class="auth-buttons">
@@ -22,7 +22,7 @@
   <!-- Tab Pages -->
   <div class="tab-container">
 
-    <!-- 成长中心 放到第一个 -->
+    <!-- 成长中心 -->
     <div class="tab-page" id="tab-growth">
       <h2>成长中心</h2>
       <div id="growth-boards">
@@ -36,17 +36,24 @@
       </div>
     </div>
 
-    <!-- 今日计划 放到第二个 -->
+    <!-- 今日计划 -->
     <div class="tab-page hidden" id="tab-today">
       <h2>今日计划</h2>
+      <div class="task-entry" id="entry-list">
+        <div class="entry-card" data-type="listening">听力练习</div>
+        <div class="entry-card" data-type="vocab">单词练习</div>
+        <div class="entry-card" data-type="exercise">习题练习</div>
+      </div>
       <div id="task-list"></div>
     </div>
 
+    <!-- 计划调度 -->
     <div class="tab-page hidden" id="tab-schedule">
       <h2>计划调度</h2>
       <p>每日任务拆解、阶段计划将在这里显示</p>
     </div>
 
+    <!-- 我的 -->
     <div class="tab-page hidden" id="tab-profile">
       <h2>我的</h2>
       <p>用户名: <span id="user-name">未登录</span></p>
