@@ -1,131 +1,170 @@
-*body {fon* { box-sizing: border-box; }
-
-body {
-  font-family: sans-serif;
-  background: #f5f7f2;
-  color: #222;
-  margin: 0;
-  min-height: 100dvh;
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #f5f7f2;
+    color: #222;
+    -webkit-text-size-adjust: 100%;
 }
 
 .app {
-  width: 100%;
-  min-height: 100dvh;
-  margin: 0;
-  padding: 16px;
-  padding-bottom: calc(76px + env(safe-area-inset-bottom));
+    max-width: 430px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 16px;
+    padding-bottom: 100px; /* 底部 Tab 高度预留 */
+    box-sizing: border-box;
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
 }
 
 .logo-text {
-  font-size: 22px;
-  font-weight: 700;
-  margin: 0;
-  line-height: 1.2;
-}
-
-.auth-buttons {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .auth-buttons button {
-  padding: 6px 12px;
-  border-radius: 12px;
-  border: none;
-  cursor: pointer;
-  white-space: nowrap;
+    margin-left: 8px;
+    padding: 6px 12px;
+    border-radius: 12px;
+    border: none;
+    background: #22c55e;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
 }
 
-.tab-page { display: block; }
-.hidden { display: none; }
-
-.tab-page h2 {
-  margin: 0 0 12px;
-  font-size: 20px;
+.tab-page {
+    display: block;
 }
 
-.tab-page p {
-  margin: 0;
-  line-height: 1.5;
+.hidden {
+    display: none;
 }
 
+/* 底部 Tab 样式 */
 .tab-bar {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  background: #fff;
-  border-top: 1px solid #ddd;
-  padding: 8px 6px calc(8px + env(safe-area-inset-bottom));
-  z-index: 10;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    height: 60px;
+    padding: 0;
+    z-index: 100;
 }
 
 .tab-bar button {
-  background: none;
-  border: none;
-  font-size: 14px;
-  cursor: pointer;
-  color: #333;
-  padding: 6px 4px;
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #333;
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
-.task-card {
-  background: #fff;
-  border-radius: 20px;
-  padding: 14px;
-  margin-bottom: 14px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+.tab-bar button:hover {
+    background: #f0f0f0;
+}
+
+/* 今日计划 & 成长中心卡片 */
+.task-card, .board {
+    background: #fff;
+    border-radius: 16px;
+    padding: 14px;
+    margin-bottom: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    font-size: 14px;
+    line-height: 1.4;
+    touch-action: manipulation;
 }
 
 .task-card button {
-  float: right;
-  padding: 6px 12px;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  background: #22c55e;
-  color: #fff;
+    margin-top: 8px;
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 12px;
+    background: #22c55e;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.progress-bar {
-  background: #eee;
-  border-radius: 999px;
-  overflow: hidden;
-  height: 12px;
-  margin-top: 10px;
+.board {
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    user-select: none;
 }
 
-.progress-fill {
-  height: 100%;
-  background: #22c55e;
+.board:hover {
+    background: #22c55e;
+    color: #fff;
+    transition: 0.2s;
 }
 
+#growth-boards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+#growth-boards .board {
+    flex: 1 1 48%;
+}
+
+/* 成长曲线 */
 .curve {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    align-items: flex-end;
 }
 
-@media (max-width: 360px) {
-  .auth-buttons button {
-    padding: 5px 10px;
-    font-size: 12px;
-  }
+.curve div {
+    border-radius: 6px;
+}
 
-  .tab-bar button {
-    font-size: 12px;
-  }
+/* 输入提示、辅助文字 */
+p {
+    margin: 6px 0;
+}
+
+/* 响应式适配小屏幕 */
+@media (max-width: 430px) {
+    .app {
+        padding: 12px;
+    }
+    .task-card, .board {
+        padding: 12px;
+        font-size: 13px;
+    }
+    .task-card button {
+        font-size: 14px;
+    }
+    .board {
+        font-size: 14px;
+        height: 70px;
+    }
 }
